@@ -19,7 +19,7 @@ const CreatePost = () => {
     if(form.prompt) {
       try {
         setGenerating(true);
-        const response =await fetch('http://localhost:8080/api/v1/dalle',{
+        const response =await fetch('https://portfolio-8jht.onrender.com/dalle/home',{
           method: 'post',
           headers: {
             'content-Type': 'application/json'
@@ -49,7 +49,7 @@ const CreatePost = () => {
       setLoading(true);
 
       try {
-        const response = await fetch('http://localhost:8080/api/v1/post',{
+        const response = await fetch('https://portfolio-8jht.onrender.com/dalle/post',{
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

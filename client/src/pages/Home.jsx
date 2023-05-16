@@ -24,7 +24,8 @@ const Home = () => {
     const fetchPosts = async () =>{
       setLoading(true)
       try {
-        const response = await fetch('https://portfolio-8jht.onrender.com/dalle/post', {
+        console.log('Sending request to the server')
+        const response = await fetch('https://dalle-m193.onrender.com/api/v1/post', {
           method: 'GET',
           headers:{
             'Content-Type' :'application/json'
@@ -37,7 +38,7 @@ const Home = () => {
           setAllPost(result.data.reverse());
         }
         else{
-          alert('its the problem with the reverse data')
+          console.log('there is the error')
         }
       } catch (error) {
         console.log('problem')
